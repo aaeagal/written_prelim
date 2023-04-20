@@ -1,0 +1,3644 @@
+
+
+****** Cluster 0 ******
+public static int func_8aabcb356edb40b1a67fd8ee2ce5c574(Integer x){
+    int reversed = 0;
+    while (x != 0) {
+        int lastDigit = x % 10;
+        reversed = reversed * 10 + lastDigit;
+        x /= 10;
+    }
+    if (reversed < -2147483648 || reversed > 2147483647) {
+        return 0;
+    }
+    return reversed;
+}
+public static Integer func_589af4fc713f46749cd3108ccbf15c01(Integer x){
+    if (x < -2147483648 || x > 2147483647) {
+        return 0;
+    }
+    int reversed = 0;
+    while (x != 0) {
+        int lastDigit = x % 10;
+        reversed = reversed * 10 + lastDigit;
+        x /= 10;
+    }
+    if (reversed < -2147483648 || reversed > 2147483647) {
+        return 0;
+    }
+    return reversed;
+}
+public static int func_63e028c36e7748c6843370b6c0266a28(Integer x){
+    int result = 0;
+    while (x != 0) {
+        int digit = x % 10;
+        result = result * 10 + digit;
+        x /= 10;
+    }
+    if (result > Integer.MAX_VALUE || result < Integer.MIN_VALUE) {
+        return 0;
+    }
+    return result;
+}
+public static int func_77badadcfc4a4b66ab051c4a2c25f0ad(Integer x){
+    int result = 0;
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+            return 0;
+        }
+        result = result * 10 + digit;
+    }
+    return result * sign;
+}
+public static int func_5274c2f0742b4a99bf08bf11e0565136(Integer x){
+    long reversed = 0;
+    while (x != 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    if (reversed > Integer.MAX_VALUE || reversed < Integer.MIN_VALUE) {
+        return 0;
+    }
+    return (int) reversed;
+}
+public static int func_c551f4ff5b184900a3962ff5e79304fc(Integer x){
+    int reversed = 0;
+    while (x != 0) {
+        int digit = x % 10;
+        reversed = reversed * 10 + digit;
+        x /= 10;
+    }
+    if (reversed > Integer.MAX_VALUE || reversed < Integer.MIN_VALUE) {
+        return 0;
+    }
+    return reversed;
+}
+public static int func_8f324a695bbe4b08871d19b7192bba5e(Integer x){
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    int reversed = 0;
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    if (reversed < -(Math.pow(2, 31)) || reversed > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    return reversed * sign;
+}
+public static int func_a287dd678b2d477b932033b11f0a6cab(Integer x){
+    if (x < -(Math.pow(2, 31)) || x > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    int reversed = 0;
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    if (reversed < -(Math.pow(2, 31)) || reversed > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    return reversed * sign;
+}
+public static int func_d846df4bf6f9452f94c4d8f5c13625f0(Integer x){
+    int result = 0;
+    int rem;
+    while (x != 0) {
+        rem = x % 10;
+        x = x / 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+            return 0;
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+            return 0;
+        result = result * 10 + rem;
+    }
+    return result;
+}
+public static Integer func_4595749e05c446c59177dd61195adca3(Integer x){
+    boolean isNegative = false;
+    if (x < 0) {
+        isNegative = true;
+        x *= -1;
+    }
+    int reversedInt = 0;
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (reversedInt > Integer.MAX_VALUE / 10 || (reversedInt == Integer.MAX_VALUE / 10 && digit > 7)) {
+            return 0;
+        }
+        reversedInt = reversedInt * 10 + digit;
+    }
+    if (isNegative) {
+        reversedInt *= -1;
+    }
+    return reversedInt;
+}
+public static int func_ce4aaa84700a4c6f82afa99b530799d2(Integer x){
+    long reversed = 0;
+    while (x != 0) {
+        reversed = (reversed * 10) + (x % 10);
+        x /= 10;
+    }
+    if (reversed > Integer.MAX_VALUE || reversed < Integer.MIN_VALUE) {
+        return 0;
+    }
+    return (int) reversed;
+}
+
+
+****** Cluster 128 ******
+public static Integer func_ce47d917dcb24d9ea4e48f7d6db5fb2e(Integer rem, Integer result, Integer x){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    return rem;
+}
+public static Integer func_aefb93932f044f89869010b8eb668675(Integer result, Integer rem, Integer x){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    return rem;
+}
+public static Integer func_31e1ce3e88f246d78187a02c43e206eb(Integer rem, Integer result, Integer x){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return rem;
+}
+public static Integer func_c4ccb8cf0cdd456aaa1ae6b7cf1d36b6(Integer result, Integer rem, Integer x){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return rem;
+}
+
+
+****** Cluster 2 ******
+public static Integer func_02fcb6a6530b4019bee506e63e65c46a(Integer reversed, Integer x){
+    while (x != 0) {
+        int lastDigit = x % 10;
+        reversed = reversed * 10 + lastDigit;
+        x /= 10;
+    }
+    return reversed;
+}
+public static Integer func_27b855c597cd4846b3c7cbd9a5c3f6c5(Integer result, Integer x){
+    while (x != 0) {
+        int digit = x % 10;
+        result = result * 10 + digit;
+        x /= 10;
+    }
+    return result;
+}
+public static Integer func_b6530b18c5c74e61947b5a5c92675f18(Integer result, Integer x){
+    while (x != 0) {
+        int remainder = x % 10;
+        int newResult = result * 10 + remainder;
+        if ((newResult - remainder) / 10 != result) {
+            return 0;
+        }
+        result = newResult;
+        x /= 10;
+    }
+    return result;
+}
+public static Long func_907d73cb47574ce28c809748d51a9493(Long reversed, Integer x){
+    while (x != 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    return reversed;
+}
+public static Integer func_9516b982bb0148839aff443d7933575e(Integer reversed, Integer x){
+    while (x != 0) {
+        int digit = x % 10;
+        reversed = reversed * 10 + digit;
+        x /= 10;
+    }
+    return reversed;
+}
+public static Integer func_beac07ee506e4e9eb278a33911bedda9(Integer result, Integer x){
+    while (x != 0) {
+        int remainder = x % 10;
+        x /= 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+            return 0;
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+            return 0;
+        result = result * 10 + remainder;
+    }
+    return result;
+}
+public static Integer func_6c2859a937b641429d1214dd4dfcc0c9(Integer result, Integer x){
+    while (x != 0) {
+        int digit = x % 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+            return 0;
+        }
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+            return 0;
+        }
+        result = result * 10 + digit;
+        x /= 10;
+    }
+    return result;
+}
+public static Integer func_75919e139ed844d984e9c566965f5b12(Integer result, Integer x){
+    while (x != 0) {
+        int tail = x % 10;
+        int newResult = result * 10 + tail;
+        if ((newResult - tail) / 10 != result) {
+            return 0;
+        }
+        result = newResult;
+        x = x / 10;
+    }
+    return result;
+}
+public static Long func_9e349dec821244a48bd5c7a160137c12(Long reversed, Integer x){
+    while (x != 0) {
+        reversed = (reversed * 10) + (x % 10);
+        x /= 10;
+    }
+    return reversed;
+}
+public static Integer func_7a03b36aeb7f437b8374c59e21ac0a4a(Integer result, Integer x){
+    while (x != 0) {
+        int lastDigit = x % 10;
+        x /= 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+            return 0;
+        }
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+            return 0;
+        }
+        result = result * 10 + lastDigit;
+    }
+    return result;
+}
+public static Integer func_dc897b46f41e4c5eb25d9378f1b08010(Integer result, Integer x){
+    while (x != 0) {
+        int remainder = x % 10;
+        int newResult = result * 10 + remainder;
+        if ((newResult - remainder) / 10 != result) {
+            return 0;
+        }
+        result = newResult;
+        x /= 10;
+    }
+    return result;
+}
+public static Integer func_7d419f5743f0430698eaa3829cbfb989(Integer result, Integer x){
+    while (x != 0) {
+        int remainder = x % 10;
+        x = x / 10;
+        if ((result > Integer.MAX_VALUE / 10) || (result < Integer.MIN_VALUE / 10)) {
+            return 0;
+        }
+        result = result * 10 + remainder;
+    }
+    return result;
+}
+public static Integer func_3481057b79a142a7809fd95b950a9f07(Integer result, Integer x){
+    while (x != 0) {
+        int lastDigit = x % 10;
+        int newResult = result * 10 + lastDigit;
+        if ((newResult - lastDigit) / 10 != result) {
+            return 0;
+        }
+        result = newResult;
+        x /= 10;
+    }
+    return result;
+}
+public static Integer func_c314060eb3944b049745d900b08e9505(Integer rev, Integer x){
+    while (x != 0) {
+        int lastDigit = x % 10;
+        x /= 10;
+        if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+            return 0;
+        if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+            return 0;
+        rev = rev * 10 + lastDigit;
+    }
+    return rev;
+}
+
+
+****** Cluster 3 ******
+public static Integer func_d54587c4521a4e319ce299953e469219(Integer x, Integer reversed){
+    while (x != 0) {
+        int lastDigit = x % 10;
+        reversed = reversed * 10 + lastDigit;
+        x /= 10;
+    }
+    return reversed;
+}
+public static Integer func_6943cd01a32d45508738b38c3e68d530(Integer x, Integer result){
+    while (x != 0) {
+        int digit = x % 10;
+        result = result * 10 + digit;
+        x /= 10;
+    }
+    return result;
+}
+public static Integer func_156957b1f8d2419f9d5cc1acdc74e93d(Integer x, Integer result){
+    while (x != 0) {
+        int remainder = x % 10;
+        int newResult = result * 10 + remainder;
+        if ((newResult - remainder) / 10 != result) {
+            return 0;
+        }
+        result = newResult;
+        x /= 10;
+    }
+    return result;
+}
+public static Long func_fcfdc08100a14dc786a5c28f6859fb1d(Integer x, Long reversed){
+    while (x != 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    return reversed;
+}
+public static Integer func_e4c0bbf3e1bf44e3ad6eb0ba95fbf383(Integer x, Integer reversed){
+    while (x != 0) {
+        int digit = x % 10;
+        reversed = reversed * 10 + digit;
+        x /= 10;
+    }
+    return reversed;
+}
+public static Integer func_cf6b1135affd45758633a8f442542c84(Integer x, Integer result){
+    while (x != 0) {
+        int remainder = x % 10;
+        x /= 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+            return 0;
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+            return 0;
+        result = result * 10 + remainder;
+    }
+    return result;
+}
+public static Integer func_80d55ee560994f4c8d3cfd48e6d85a35(Integer x, Integer result){
+    while (x != 0) {
+        int digit = x % 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+            return 0;
+        }
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+            return 0;
+        }
+        result = result * 10 + digit;
+        x /= 10;
+    }
+    return result;
+}
+public static Integer func_12a84c377328444d9ac28ecafd9d6e21(Integer x, Integer result){
+    while (x != 0) {
+        int tail = x % 10;
+        int newResult = result * 10 + tail;
+        if ((newResult - tail) / 10 != result) {
+            return 0;
+        }
+        result = newResult;
+        x = x / 10;
+    }
+    return result;
+}
+public static Long func_0030cf8bd84144a9909b6c57ce4532d0(Integer x, Long reversed){
+    while (x != 0) {
+        reversed = (reversed * 10) + (x % 10);
+        x /= 10;
+    }
+    return reversed;
+}
+public static Integer func_6372b6ae0f9741e6b0871ac09ae9b8ee(Integer x, Integer result){
+    while (x != 0) {
+        int lastDigit = x % 10;
+        x /= 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+            return 0;
+        }
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+            return 0;
+        }
+        result = result * 10 + lastDigit;
+    }
+    return result;
+}
+public static Integer func_38eb1377666f4c8993b2db6804b9628b(Integer x, Integer result){
+    while (x != 0) {
+        int remainder = x % 10;
+        int newResult = result * 10 + remainder;
+        if ((newResult - remainder) / 10 != result) {
+            return 0;
+        }
+        result = newResult;
+        x /= 10;
+    }
+    return result;
+}
+public static Integer func_72960cd3fbd54162a5b225adacb60ca7(Integer x, Integer result){
+    while (x != 0) {
+        int remainder = x % 10;
+        x = x / 10;
+        if ((result > Integer.MAX_VALUE / 10) || (result < Integer.MIN_VALUE / 10)) {
+            return 0;
+        }
+        result = result * 10 + remainder;
+    }
+    return result;
+}
+public static Integer func_d4e71900a2cc4e85a71e69e5d38b4dc2(Integer x, Integer result){
+    while (x != 0) {
+        int lastDigit = x % 10;
+        int newResult = result * 10 + lastDigit;
+        if ((newResult - lastDigit) / 10 != result) {
+            return 0;
+        }
+        result = newResult;
+        x /= 10;
+    }
+    return result;
+}
+public static Integer func_28d19daefcd34cadbf1e1b2a4ba8fc80(Integer x, Integer rev){
+    while (x != 0) {
+        int lastDigit = x % 10;
+        x /= 10;
+        if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+            return 0;
+        if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+            return 0;
+        rev = rev * 10 + lastDigit;
+    }
+    return rev;
+}
+
+
+****** Cluster 7 ******
+public static Integer func_19213e961cc443c3bee513d89190bf11(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return newResult;
+}
+public static Integer func_ab6a5f69792d43cfb1c24f4e32657f63(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return result;
+}
+public static Integer func_9dc6949fb6bf48358d0a354806522efd(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_dbbafdedf77541dc94eb5ed88c45355d(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_d37179e2d97b4167a107a9ff65e27728(Integer x, Integer result){
+    int digit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    return result;
+}
+public static Integer func_7460a43de2054fd29d92b70f785e41b9(Integer x, Integer result){
+    int remainder = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return result;
+}
+public static Integer func_561a586980e1464382dd29dc78b8355c(Integer x, Integer reversedInt){
+    int digit = x % 10;
+    x /= 10;
+    if (reversedInt > Integer.MAX_VALUE / 10 || (reversedInt == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    reversedInt = reversedInt * 10 + digit;
+    return reversedInt;
+}
+public static Integer func_2c3ba762e2b140538487da566b78de12(Integer x, Integer result){
+    int digit = x % 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    return result;
+}
+public static Integer func_890d465cc903494e8b30077acf91c74c(Integer x, Integer result){
+    int digit = x % 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return result;
+}
+public static Integer func_b66fd03036324ffba9c4cc0e66c8db57(Integer x, Integer result){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return result;
+}
+public static Integer func_a503c7eebde14b22af77b42f383ba0eb(Integer x, Integer result){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return newResult;
+}
+public static Integer func_3ba26eb7c7c044a4b6b803142e93bf4c(Integer x, Integer result){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return result;
+}
+public static Integer func_ce212d2227464af5b5e36238b9261909(Integer x, Integer result){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return newResult;
+}
+public static Integer func_9cbcbe0423c943bf9e80487f725fca01(Integer x, Integer result){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return result;
+}
+public static Integer func_904c70d54403404e8375b75aa421ce16(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return result;
+}
+public static Integer func_8deff9e150ac4e448725b09b103112ec(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return newResult;
+}
+public static Integer func_40852400e4be4c3697b28c00a5edb7ea(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_168e9670ad9945be9d8840ba02f5717b(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_a49f325e6bc9405b84eb6e1d01200569(Integer x, Integer result){
+    int remainder = x % 10;
+    x = x / 10;
+    if ((result > Integer.MAX_VALUE / 10) || (result < Integer.MIN_VALUE / 10)) {
+        return 0;
+    }
+    result = result * 10 + remainder;
+    return result;
+}
+public static Integer func_0c962c3e92df498e91a101948345b2d5(Integer x, Integer result){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return newResult;
+}
+public static Integer func_5d01ca6e36ad47419db366e6f68f6659(Integer x, Integer result){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return result;
+}
+public static Integer func_5c5a308544a0454ea3806e4019865ce4(Integer x, Integer result){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_a3ed743f9c304b2189054567fe29c332(Integer x, Integer result){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_b27c905372cd41bcb921fa8eae7c0d31(Integer x, Integer rev){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return rev;
+}
+
+
+****** Cluster 8 ******
+public static Integer func_b39da6f410434ebdbcde1efff4f148db(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return remainder;
+}
+public static Integer func_402cbff9cfbb4d278b2918d6cc0a8c72(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return remainder;
+}
+public static Integer func_d4e0770f6c454b4b9e043eb3216e2ed2(Integer x, Integer result){
+    int digit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    return digit;
+}
+public static Integer func_655ac28977fe4005860dcbcd4d5f5654(Integer x, Integer result){
+    int remainder = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    return remainder;
+}
+public static Integer func_9ab49df4ecf44f64830995ea772b0b1a(Integer x, Integer result){
+    int remainder = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return remainder;
+}
+public static Integer func_87b159aebcb644fe99cd1d3c3fdc8a2a(Integer x, Integer reversedInt){
+    int digit = x % 10;
+    x /= 10;
+    if (reversedInt > Integer.MAX_VALUE / 10 || (reversedInt == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    reversedInt = reversedInt * 10 + digit;
+    return digit;
+}
+public static Integer func_585c71362a844ad886c0f89c82527d03(Integer x, Integer result){
+    int digit = x % 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    return digit;
+}
+public static Integer func_bf680eacfa6b49248d5101d1f9c1ed16(Integer x, Integer result){
+    int digit = x % 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return digit;
+}
+public static Integer func_3267d6b244e9403cb83be316c68635f9(Integer x, Integer result){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return tail;
+}
+public static Integer func_17573076a411467da9e93c6588becf30(Integer x, Integer result){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return tail;
+}
+public static Integer func_8be6c1691f29452d9bc5f704bf1a9aed(Integer x, Integer result){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    return lastDigit;
+}
+public static Integer func_742d61058c35410fa3fe78e52ce53c70(Integer x, Integer result){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return lastDigit;
+}
+public static Integer func_870166543231425785e1395e4bfd468b(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return remainder;
+}
+public static Integer func_c8a4f28d86b8413b8cd134c199fc3251(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return remainder;
+}
+public static Integer func_5387363dcd72482e994e1b32f04eb635(Integer x, Integer result){
+    int remainder = x % 10;
+    x = x / 10;
+    if ((result > Integer.MAX_VALUE / 10) || (result < Integer.MIN_VALUE / 10)) {
+        return 0;
+    }
+    result = result * 10 + remainder;
+    return remainder;
+}
+public static Integer func_c4edfad0283b45a5bcbe66c93b17718c(Integer x, Integer result){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return lastDigit;
+}
+public static Integer func_1c7d0903fde845b1a2b590107a05f471(Integer x, Integer result){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return lastDigit;
+}
+public static Integer func_6ea4e7f028e34378a1dbb91c3b816638(Integer x, Integer rev){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    return lastDigit;
+}
+public static Integer func_88644bed981444ac8d7530532972a84e(Integer x, Integer rev){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return lastDigit;
+}
+
+
+****** Cluster 9 ******
+public static Integer func_400b35a891e24acba88cdd70171085aa(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return newResult;
+}
+public static Integer func_21875171afa747b2bf6edbd3577cb545(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return result;
+}
+public static Integer func_bd6e1315e7ce4a198374e3c68fd24482(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_6b5e3226f9914409a113ea2f9770a8ea(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_71422345c63548dbb7b4d416577f390f(Integer result, Integer x){
+    int digit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    return result;
+}
+public static Integer func_ef35757c25c248fa85a81833312f839f(Integer result, Integer x){
+    int remainder = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return result;
+}
+public static Integer func_ddf4731c97d14637888aded31e2bb5bc(Integer reversedInt, Integer x){
+    int digit = x % 10;
+    x /= 10;
+    if (reversedInt > Integer.MAX_VALUE / 10 || (reversedInt == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    reversedInt = reversedInt * 10 + digit;
+    return reversedInt;
+}
+public static Integer func_e4265587cac143ba89f7b8d9c1218112(Integer result, Integer x){
+    int digit = x % 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    return result;
+}
+public static Integer func_021a07940a0440928d6aa4bc897df7fc(Integer result, Integer x){
+    int digit = x % 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return result;
+}
+public static Integer func_e9d5e0d2f555409a92f6be26889aecc9(Integer result, Integer x){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return result;
+}
+public static Integer func_64b976fc84204de3949591d11513a1de(Integer result, Integer x){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return newResult;
+}
+public static Integer func_129aee873a5944418460b85c835b6e6f(Integer result, Integer x){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return result;
+}
+public static Integer func_de5a1aa194d14256a29657b36231492e(Integer result, Integer x){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return newResult;
+}
+public static Integer func_f93c519ac35c48c4899633ae4b25ef36(Integer result, Integer x){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return result;
+}
+public static Integer func_22f78dfdc6794b179ca013c45d05f386(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return result;
+}
+public static Integer func_d293b9affef44611bc95e0c00d2e3540(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return newResult;
+}
+public static Integer func_c65c428db0324ba2952a0d0fa4a0edc7(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_30783091a34d430bb1449888a1bbba00(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_72911d3dddc847cf9ddfab5b6d14e90c(Integer result, Integer x){
+    int remainder = x % 10;
+    x = x / 10;
+    if ((result > Integer.MAX_VALUE / 10) || (result < Integer.MIN_VALUE / 10)) {
+        return 0;
+    }
+    result = result * 10 + remainder;
+    return result;
+}
+public static Integer func_f4029dd1a9a049c188ed1f0fed66b265(Integer result, Integer x){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return newResult;
+}
+public static Integer func_e6b7cefbfd32440598f1bf8707b581c9(Integer result, Integer x){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return result;
+}
+public static Integer func_c6bd8687cff24af084f972ad11d4dd89(Integer result, Integer x){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_f147e266ff30492e9930fbc13e622845(Integer result, Integer x){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_19f892d7b2364e879989dc3922e68981(Integer rev, Integer x){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return rev;
+}
+
+
+****** Cluster 10 ******
+public static Integer func_270ffd2d7309424aaf227a0f3889152a(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return remainder;
+}
+public static Integer func_31ffa45868de42f5a274c2b9c82302d8(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return remainder;
+}
+public static Integer func_0ca38f1e16e34717b1e1befc73f74f96(Integer result, Integer x){
+    int digit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    return digit;
+}
+public static Integer func_a999ed18ecad48e08a16cffc32684f36(Integer result, Integer x){
+    int remainder = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    return remainder;
+}
+public static Integer func_73d9d1a2e62e4f9991f52e739fd41c81(Integer result, Integer x){
+    int remainder = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return remainder;
+}
+public static Integer func_9e72338838f145c686f2b668fcb60e96(Integer reversedInt, Integer x){
+    int digit = x % 10;
+    x /= 10;
+    if (reversedInt > Integer.MAX_VALUE / 10 || (reversedInt == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    reversedInt = reversedInt * 10 + digit;
+    return digit;
+}
+public static Integer func_bf273d89422640938057419ac34f0eae(Integer result, Integer x){
+    int digit = x % 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    return digit;
+}
+public static Integer func_353c967d10594b52b70b1bb79e7b62f8(Integer result, Integer x){
+    int digit = x % 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return digit;
+}
+public static Integer func_3abe9545c1034864a5706cead97714ca(Integer result, Integer x){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return tail;
+}
+public static Integer func_dbffea89f2b649d59277e0d92bb7acf1(Integer result, Integer x){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return tail;
+}
+public static Integer func_232b4e8a029d419880cf332fb8f2e6ef(Integer result, Integer x){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    return lastDigit;
+}
+public static Integer func_8f21f715c3fe439ca81cbc05045618d4(Integer result, Integer x){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return lastDigit;
+}
+public static Integer func_4413dbee0ff74392b2034512396b2d2b(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return remainder;
+}
+public static Integer func_8d8287e3870d49b19a12f2d94a8e2154(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return remainder;
+}
+public static Integer func_4c0b8ef5a4cd41c8a62876aeaefc2959(Integer result, Integer x){
+    int remainder = x % 10;
+    x = x / 10;
+    if ((result > Integer.MAX_VALUE / 10) || (result < Integer.MIN_VALUE / 10)) {
+        return 0;
+    }
+    result = result * 10 + remainder;
+    return remainder;
+}
+public static Integer func_ba782d7031204370be93b57415ae80b5(Integer result, Integer x){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    return lastDigit;
+}
+public static Integer func_777d8c376a4e45d5803825529dec2226(Integer result, Integer x){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return lastDigit;
+}
+public static Integer func_1879b34365184959b3f78f2b35c7bbc5(Integer rev, Integer x){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    return lastDigit;
+}
+public static Integer func_bad2bde2557c463ebde03b31dcbe5e20(Integer rev, Integer x){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return lastDigit;
+}
+
+
+****** Cluster 12 ******
+public static Integer func_2612ed7f7b7549a1afa46fef8c3313c7(Integer remainder, Integer x, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_126efa7f327445bebaec024ee377c11a(Integer result, Integer x, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_896ec8d817da4524a0518f4141db83ba(Integer result, Integer x, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_681a116e6f144a95ac8aa04327f9a025(Integer remainder, Integer x, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_a26459e7dd1c482799c6ef82b0a27c30(Integer result, Integer x, Integer remainder){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return x;
+}
+public static Integer func_4d224463b12a42e3bbc7adabe4cdca91(Integer remainder, Integer x, Integer result){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return x;
+}
+public static Integer func_c76c6daecd3343949f29c76cee0b56eb(Integer rem, Integer x, Integer result){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    return x;
+}
+public static Integer func_440fd62032ed4178823898ee5201ad21(Integer result, Integer x, Integer rem){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    return x;
+}
+public static Integer func_4b7c15d1dffd4196b6273b4a841cee30(Integer rem, Integer x, Integer result){
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return x;
+}
+public static Integer func_b1ea65c77dfc448e914dd40f244cb226(Integer result, Integer x, Integer rem){
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return x;
+}
+public static Integer func_43e9b6d426eb474db383fb3315c1c081(Integer rem, Integer x, Integer result){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return x;
+}
+public static Integer func_4caeb3a79b694ab2bfeecb2153f13dc2(Integer result, Integer x, Integer rem){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return x;
+}
+public static Integer func_5d4740333350411e879d33497370b596(Integer digit, Integer x, Integer result){
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return x;
+}
+public static Integer func_93187df0e2e845b8be2e25bc8cdf99af(Integer result, Integer x, Integer digit){
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return x;
+}
+public static Integer func_0b03146bef4d4d79bf69292b097f368f(Integer tail, Integer x, Integer result){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return x;
+}
+public static Integer func_546f417640df445fb2c9bf801f99c716(Integer result, Integer x, Integer tail){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return x;
+}
+public static Integer func_3593eabca87246a1a107c32d2db90f3f(Integer result, Integer x, Integer lastDigit){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return x;
+}
+public static Integer func_59150661dcd844eaafcaa8facf027a8a(Integer lastDigit, Integer x, Integer result){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return x;
+}
+public static Integer func_af056d8b9ede414e80795f37eb765e89(Integer result, Integer x, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_3019c8f29d5a4c16b07b2cdc6d447ace(Integer remainder, Integer x, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_1d200ef667b942778b59497b7bc376c5(Integer result, Integer x, Integer lastDigit){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_7371239bebd34a6b9a84c28e3c103ffb(Integer lastDigit, Integer x, Integer result){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_268b1c0dd6174a278ec433f57451b895(Integer lastDigit, Integer x, Integer rev){
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return x;
+}
+public static Integer func_bcc1aebe7b814d74bf2abb4040da9c91(Integer rev, Integer x, Integer lastDigit){
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return x;
+}
+
+
+****** Cluster 14 ******
+public static Integer func_91479c8cadf44b96949e25d7b0662a1c(Integer x, Integer remainder, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_7973894e0a1f4308878c73f8bba1b3f0(Integer x, Integer result, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_cd0de6efa9f1405990e214fa7b6b3959(Integer x, Integer result, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_2de83b8a1c204804befd3acc3177bb0e(Integer x, Integer remainder, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_e30cf4d296824a2b99da54d899086f1e(Integer x, Integer remainder, Integer result){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return x;
+}
+public static Integer func_c7b9131682ec4df584353888fec0177f(Integer x, Integer result, Integer remainder){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return x;
+}
+public static Integer func_bbc08a8b62e04e428b608d2e7765c081(Integer x, Integer rem, Integer result){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    return x;
+}
+public static Integer func_38ca7ed90f6d459cbec413cd47327303(Integer x, Integer result, Integer rem){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    return x;
+}
+public static Integer func_e752c911c1a744d090ffdfff25d5e5a4(Integer x, Integer rem, Integer result){
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return x;
+}
+public static Integer func_34f179ec6c57479a905455f437132fc8(Integer x, Integer result, Integer rem){
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return x;
+}
+public static Integer func_6607c9f8075c4596b7be5620c6ad48f5(Integer x, Integer rem, Integer result){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return x;
+}
+public static Integer func_25c0ca5c209c4dd8862e54d6893fac5c(Integer x, Integer result, Integer rem){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return x;
+}
+public static Integer func_fce75ba352594a80bbd88b5df6791416(Integer x, Integer digit, Integer result){
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return x;
+}
+public static Integer func_0971d6a8f2ab403f88858e7842972e3d(Integer x, Integer result, Integer digit){
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return x;
+}
+public static Integer func_ea03b19807234bd58d108335171eb538(Integer x, Integer tail, Integer result){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return x;
+}
+public static Integer func_13db067152c24eeabf3d456b8cdefc69(Integer x, Integer result, Integer tail){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return x;
+}
+public static Integer func_95daa847de604b8aa01e92c798f85dd7(Integer x, Integer lastDigit, Integer result){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return x;
+}
+public static Integer func_56af8e0658ba4752831d2f408e020cb3(Integer x, Integer result, Integer lastDigit){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return x;
+}
+public static Integer func_7d0a3700c3d14a6eb2f07b24b6ea39fd(Integer x, Integer remainder, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_55ed9f99547a47d3adc2074478b24e42(Integer x, Integer result, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_bc474f4390bb4883a8d48e4c7c7111a2(Integer x, Integer result, Integer lastDigit){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_bf19a2edce074fe9ad2d4c7c737d2f27(Integer x, Integer lastDigit, Integer result){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_3c568173e91d44d7b388d70689c10e15(Integer x, Integer rev, Integer lastDigit){
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return x;
+}
+public static Integer func_b1851d3fc312409e86eff9924cb4f523(Integer x, Integer lastDigit, Integer rev){
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return x;
+}
+
+
+****** Cluster 15 ******
+public static Integer func_0d029653dcb84c61b6ea5882ace54ef0(Integer remainder, Integer result, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_e9cfb2aa53124df2ace2decba5c73833(Integer result, Integer remainder, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_8c59263b24144c21814931a58e04e823(Integer result, Integer remainder, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_15b44e61ef4d4a81a04fa76ee8a494b9(Integer remainder, Integer result, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_616c8d929ebd4c4b9a02680139372463(Integer remainder, Integer result, Integer x){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return x;
+}
+public static Integer func_8a55c3fcc4484c439eb78d1ddad94cac(Integer result, Integer remainder, Integer x){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return x;
+}
+public static Integer func_1032106adb8e4ae4bb8c84b53ad8df93(Integer rem, Integer result, Integer x){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    return x;
+}
+public static Integer func_d24bd47a3321403684adcd65a20804bb(Integer result, Integer rem, Integer x){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    return x;
+}
+public static Integer func_23a9ec96c28a49bca446519db99a9186(Integer rem, Integer result, Integer x){
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return x;
+}
+public static Integer func_8309428b364a43608bbecea8d29b86e7(Integer result, Integer rem, Integer x){
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return x;
+}
+public static Integer func_24ba8bdd91f74a8f800c571312e04104(Integer rem, Integer result, Integer x){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return x;
+}
+public static Integer func_9bd10451d1ff4d9cab4cc908ae946e71(Integer result, Integer rem, Integer x){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return x;
+}
+public static Integer func_2dcac48631f1470f813b8cbb7931db8b(Integer result, Integer digit, Integer x){
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return x;
+}
+public static Integer func_5b2cc29320c34857a4879d79e463a1e4(Integer digit, Integer result, Integer x){
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return x;
+}
+public static Integer func_5f2cc81826084e40a26e9bae3a0b912e(Integer tail, Integer result, Integer x){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return x;
+}
+public static Integer func_557492f197f44ac38325dc0c873a70ee(Integer result, Integer tail, Integer x){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return x;
+}
+public static Integer func_921f025e65d746ad809027f0e0c2b0f2(Integer lastDigit, Integer result, Integer x){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return x;
+}
+public static Integer func_d859b6f2144c40418dfde4922e778b47(Integer result, Integer lastDigit, Integer x){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return x;
+}
+public static Integer func_e6296c741f34442b8660e8874cb9e96e(Integer result, Integer remainder, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_2d4f915214ba4d5a8acad05b02c870f3(Integer remainder, Integer result, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_42dd9008f76d435f975b2cdd3121447e(Integer result, Integer lastDigit, Integer x){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_5c251057179141d69d3b149bb12c956c(Integer lastDigit, Integer result, Integer x){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_3d140efae4eb4d8c84a472fb5809456b(Integer rev, Integer lastDigit, Integer x){
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return x;
+}
+public static Integer func_21d86b24880e478b9a8893604dac7d33(Integer lastDigit, Integer rev, Integer x){
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return x;
+}
+
+
+****** Cluster 19 ******
+public static Integer func_bcdaa070d6be42e08b57ec28f7323ebd(Integer x, Integer remainder, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_121affe61e9146259a180548e6542024(Integer x, Integer remainder, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_6b1a3201cae347048bfb22af8d9f7074(Integer x, Integer remainder, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_a4455d95f8414ddc89bb021733faf6e4(Integer x, Integer remainder, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_8d828254d4bd4d209588744e25e8105e(Integer x, Integer remainder, Integer result){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return result;
+}
+public static Integer func_4bae6e6c52a547c3835f8492c84a680e(Integer x, Integer rem, Integer result){
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return result;
+}
+public static Integer func_ef2e85c97e014711a332b5cfd082cf62(Integer x, Integer digit, Integer result){
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return result;
+}
+public static Integer func_a611d34c8f5b4d7f9ea9c889a8abdf50(Integer x, Integer tail, Integer result){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return result;
+}
+public static Integer func_9e155cba415c4333b28a79353f1fe4ac(Integer x, Integer tail, Integer result){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return newResult;
+}
+public static Integer func_a16aa8dc77244c9fb1312e2b9ef40d8d(Integer x, Integer lastDigit, Integer result){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return result;
+}
+public static Integer func_18c3616f43384e60b054e530acf3cec4(Integer x, Integer remainder, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_5ee1f5628a4e431aa348aa25483775c8(Integer x, Integer remainder, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_f56ff495e6e442b082f96be1988ba866(Integer x, Integer lastDigit, Integer result){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_d8356b3389cb4a38aaf908028bcca3fb(Integer x, Integer lastDigit, Integer result){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_3d8be0ab74e14fa3af68da286b28a9a4(Integer x, Integer lastDigit, Integer rev){
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return rev;
+}
+
+
+****** Cluster 20 ******
+public static Integer func_5e9a5285b9984853a70fe2b663101544(Integer remainder, Integer x, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_4094e00462924cbea37dd14bf6cab7af(Integer remainder, Integer x, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_abcbbb6283114bcbbface37a6efcee19(Integer remainder, Integer x, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_7dde77cb2e674c2fb127d694f5a7c802(Integer remainder, Integer x, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_72c0e16632ca4064abbf4e5ea82eea1c(Integer remainder, Integer x, Integer result){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return result;
+}
+public static Integer func_03881791356b427e973bce40e7e3886c(Integer rem, Integer x, Integer result){
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return result;
+}
+public static Integer func_f59e4c48ce8a4c25b023c163eea93171(Integer digit, Integer x, Integer result){
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return result;
+}
+public static Integer func_940588539d384c77a273c168cabbf96e(Integer tail, Integer x, Integer result){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return result;
+}
+public static Integer func_2649bbd1d229470285a5630da9cc7b11(Integer tail, Integer x, Integer result){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return newResult;
+}
+public static Integer func_88dfbf39367b4b3487ebd1f970bf7ade(Integer lastDigit, Integer x, Integer result){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return result;
+}
+public static Integer func_d8cacb82d97448598e0c093660a5dadb(Integer remainder, Integer x, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_aff4596d7c864ae3a281cfcad72b7a89(Integer remainder, Integer x, Integer result){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_0272699dec2448898049b1de77fc7877(Integer lastDigit, Integer x, Integer result){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_71b6bf8a296849aea922c6c3d103d1ca(Integer lastDigit, Integer x, Integer result){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_522239ae0f13481f8c24bf670c4e2739(Integer lastDigit, Integer x, Integer rev){
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return rev;
+}
+
+
+****** Cluster 21 ******
+public static Integer func_609decd2c77743adb2f4a30bca679ce8(Integer remainder, Integer result, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_b92410bfe43b4a92a35b6796ba8f3abf(Integer remainder, Integer result, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_9a45c62625ca4954a58247f5ab5f1080(Integer remainder, Integer result, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_97a35a89742c4f2b9aea7fcaff1a2210(Integer remainder, Integer result, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_99ad6816e5274f09a77af510fd90567d(Integer remainder, Integer result, Integer x){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return result;
+}
+public static Integer func_12c828acd50a44b7901b961064bb9d49(Integer rem, Integer result, Integer x){
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return result;
+}
+public static Integer func_981247c863e84308aa11dae3dbea6f1d(Integer digit, Integer result, Integer x){
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return result;
+}
+public static Integer func_8087124e00de4486a8f8a3c6f11efabf(Integer tail, Integer result, Integer x){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return result;
+}
+public static Integer func_4e0ba8bb45e44b5193839d4c24b11127(Integer tail, Integer result, Integer x){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return newResult;
+}
+public static Integer func_04dcc476d7c54c0592bc5b98378ac386(Integer lastDigit, Integer result, Integer x){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return result;
+}
+public static Integer func_6b921637da2d4528a7dec58fa446ed97(Integer remainder, Integer result, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_a5da88ee5efa466daa0b0dc4bc258d7a(Integer remainder, Integer result, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_5a05c29ddf0741808d5e7a4b4eb70b37(Integer lastDigit, Integer result, Integer x){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_f38ef9819f834162a9b56e2ef2f33df4(Integer lastDigit, Integer result, Integer x){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_9a366a10be0347cc8252dc07092b3b61(Integer lastDigit, Integer rev, Integer x){
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return rev;
+}
+
+
+****** Cluster 22 ******
+public static Integer func_2a8f660616c94c39b32020f0a94d9a01(Integer x, Integer result, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_af9e12b83c084b5ea5fdf02d67847977(Integer x, Integer result, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_e32b5533e5ce4d38b931de7c3f47c3e0(Integer x, Integer result, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_e491cd5554d94168ac2495c020719bda(Integer x, Integer result, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_e190828639c74e6b9cd42f3679ec65a2(Integer x, Integer result, Integer remainder){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return result;
+}
+public static Integer func_b1020c3df9404450a457fa3b0c0e6271(Integer x, Integer result, Integer rem){
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return result;
+}
+public static Integer func_109749272d6e4d89b07b17ac5ded5b33(Integer x, Integer result, Integer digit){
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return result;
+}
+public static Integer func_7429d3d7561e40f3871499956d0f1e2b(Integer x, Integer result, Integer tail){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return result;
+}
+public static Integer func_34d22f5bbeb44d938b6f81bbe734c1a5(Integer x, Integer result, Integer tail){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return newResult;
+}
+public static Integer func_3effa88c2fc74a47a3fff99946bece01(Integer x, Integer result, Integer lastDigit){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return result;
+}
+public static Integer func_759a19beb0434e3a8fc5d41e2ffafda2(Integer x, Integer result, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_64ba5b7c856e4dfe9df7133870c6b00a(Integer x, Integer result, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_d4345521596d4153903214b7b78c832f(Integer x, Integer result, Integer lastDigit){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_a27ff1786750412ebe5435eb3ba28a0e(Integer x, Integer result, Integer lastDigit){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_5dd0ae9043904645bee427bcae4e9a9f(Integer x, Integer rev, Integer lastDigit){
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return rev;
+}
+
+
+****** Cluster 23 ******
+public static Integer func_aaa4f51b492b400488deddafa0889c03(Integer result, Integer x, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_e14f3af330364fef94c8e962158966a5(Integer result, Integer x, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_ebaa4d0582664c8da79b6b8b7fd375f7(Integer result, Integer x, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_f5662666167e4914a27e102c9243817f(Integer result, Integer x, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_21ae02c498894e7db58672616ec5ac0b(Integer result, Integer x, Integer remainder){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return result;
+}
+public static Integer func_32133f6e40e042cb8a63ffee8d9fa57b(Integer result, Integer x, Integer rem){
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return result;
+}
+public static Integer func_40ba45cca7da4467a05f8e0fa79a7ed6(Integer result, Integer x, Integer digit){
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return result;
+}
+public static Integer func_0ef8fd446212409dadc9cf22a5e929ed(Integer result, Integer x, Integer tail){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return result;
+}
+public static Integer func_fb7c86998c7448a68d3ef7d0910f3a8d(Integer result, Integer x, Integer tail){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return newResult;
+}
+public static Integer func_b52f9134021d4a2db28a5c048b4f4bdb(Integer result, Integer x, Integer lastDigit){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return result;
+}
+public static Integer func_2f418063461547bb8cb7288ba76cd1d7(Integer result, Integer x, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_9d72517aa3214f34b6f5a5220e9977b6(Integer result, Integer x, Integer remainder){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_e8270e3165e54a4f8c01746d234ded6c(Integer result, Integer x, Integer lastDigit){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_146180cf2a5445418c7c90cd934ce06d(Integer result, Integer x, Integer lastDigit){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_e35c396301924868aaa9644a1b964042(Integer rev, Integer x, Integer lastDigit){
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return rev;
+}
+
+
+****** Cluster 24 ******
+public static Integer func_c475987dbc9a4d5b87ea1bba736fd9d2(Integer result, Integer remainder, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_2307c8c965ba405e89dd7b07aeaf4eec(Integer result, Integer remainder, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_4680f0a88ab34ccd8bfb11cb4c8fb28c(Integer result, Integer remainder, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_bb8fd7013e8042088710c17f4000f2d1(Integer result, Integer remainder, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_51e7e10ee3f246b5b6b46f6fd2347993(Integer result, Integer remainder, Integer x){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return result;
+}
+public static Integer func_3996de6931224dbbbcb3353bb310cc42(Integer result, Integer rem, Integer x){
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return result;
+}
+public static Integer func_456b02d299434de98ab4637b08f6ddc1(Integer result, Integer digit, Integer x){
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return result;
+}
+public static Integer func_ab3d1499c95449d58a2d6eb5634e6a82(Integer result, Integer tail, Integer x){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return result;
+}
+public static Integer func_cadc7892dca04171b1f175ad8884346e(Integer result, Integer tail, Integer x){
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return newResult;
+}
+public static Integer func_8fd86b1d7b5545dfaee5ba1a8e170096(Integer result, Integer lastDigit, Integer x){
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return result;
+}
+public static Integer func_71cba35acde6482287a469ea8ac7cae8(Integer result, Integer remainder, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_1c0bd93b40334f33a98ea7e3ac3dad69(Integer result, Integer remainder, Integer x){
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_a8693264bcdc4514bde48014bc248050(Integer result, Integer lastDigit, Integer x){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return newResult;
+}
+public static Integer func_3580aa7a48c64738a4a679cc9dda8b6c(Integer result, Integer lastDigit, Integer x){
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return result;
+}
+public static Integer func_4d4dff2809df41689e2275f2efffd5da(Integer rev, Integer lastDigit, Integer x){
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return rev;
+}
+
+
+****** Cluster 31 ******
+public static Integer func_6642d667b4804715b07e4acf5dd25ba5(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_4e520f27f3e648a58c7ad79736a630e4(Integer result, Integer x){
+    int digit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    return x;
+}
+public static Integer func_b775fd249a0f4940a2a57efd5acc4271(Integer result, Integer x){
+    int remainder = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    return x;
+}
+public static Integer func_641d6c886eb9416abb1f9ebcd111f583(Integer result, Integer x){
+    int remainder = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return x;
+}
+public static Integer func_b484efd7aacc4d5f9f45a70ead4f4b23(Integer reversedInt, Integer x){
+    int digit = x % 10;
+    x /= 10;
+    if (reversedInt > Integer.MAX_VALUE / 10 || (reversedInt == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    reversedInt = reversedInt * 10 + digit;
+    return x;
+}
+public static Integer func_85e7b52a2296430fb83f17b4382ea7be(Integer result, Integer x){
+    int digit = x % 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return x;
+}
+public static Integer func_21b727e30e06469eb2695a1b5f323716(Integer result, Integer x){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return x;
+}
+public static Integer func_ebdd6a2b1fda43bdaadfe1c147a99fa1(Integer result, Integer x){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    return x;
+}
+public static Integer func_b9ade6e7d0e4436c877efa6ed093d463(Integer result, Integer x){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return x;
+}
+public static Integer func_b65bbfcba23e4633832c5714a26b7235(Integer result, Integer x){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_b5e357e1818145bd9c7f3459a4612ac5(Integer result, Integer x){
+    int remainder = x % 10;
+    x = x / 10;
+    if ((result > Integer.MAX_VALUE / 10) || (result < Integer.MIN_VALUE / 10)) {
+        return 0;
+    }
+    result = result * 10 + remainder;
+    return x;
+}
+public static Integer func_cccd2d223ee14508ac576a936a7e2bd3(Integer result, Integer x){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_eac1ab3981c04cf380889bf7a82216aa(Integer rev, Integer x){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    return x;
+}
+public static Integer func_e5317ca2d53047b4adefb08f22715020(Integer rev, Integer x){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return x;
+}
+
+
+****** Cluster 33 ******
+public static Integer func_129c85e320bd475cae60d9dca60026e8(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_a7d9082ff8b84857bfdcc5ed9f3c2013(Integer x, Integer result){
+    int digit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    return x;
+}
+public static Integer func_c445df97eaa44826868f48d6293f070a(Integer x, Integer result){
+    int remainder = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    return x;
+}
+public static Integer func_b8ed36492fe14614891ac65362dcb7d1(Integer x, Integer result){
+    int remainder = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && remainder > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && remainder < -8))
+        return 0;
+    result = result * 10 + remainder;
+    return x;
+}
+public static Integer func_74c846f947914c93a26ce1b9f04bfb36(Integer x, Integer reversedInt){
+    int digit = x % 10;
+    x /= 10;
+    if (reversedInt > Integer.MAX_VALUE / 10 || (reversedInt == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    reversedInt = reversedInt * 10 + digit;
+    return x;
+}
+public static Integer func_dce0e13bc7824c0d97658ba0bee6da85(Integer x, Integer result){
+    int digit = x % 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+        return 0;
+    }
+    result = result * 10 + digit;
+    x /= 10;
+    return x;
+}
+public static Integer func_d3756a30f8d6497fbbd9618210dfb05f(Integer x, Integer result){
+    int tail = x % 10;
+    int newResult = result * 10 + tail;
+    if ((newResult - tail) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x = x / 10;
+    return x;
+}
+public static Integer func_7e7d923f201a4a16809ab634fd6f5f46(Integer x, Integer result){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    return x;
+}
+public static Integer func_63c64b97467c4fd8a07219e7d7e32cea(Integer x, Integer result){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
+        return 0;
+    }
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
+        return 0;
+    }
+    result = result * 10 + lastDigit;
+    return x;
+}
+public static Integer func_3a103edf700f4e27a84309cea441a153(Integer x, Integer result){
+    int remainder = x % 10;
+    int newResult = result * 10 + remainder;
+    if ((newResult - remainder) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_71ed0dd4ef1649dc8d67635c27aa1701(Integer x, Integer result){
+    int remainder = x % 10;
+    x = x / 10;
+    if ((result > Integer.MAX_VALUE / 10) || (result < Integer.MIN_VALUE / 10)) {
+        return 0;
+    }
+    result = result * 10 + remainder;
+    return x;
+}
+public static Integer func_05ab49f8e7c746e19e5dd30e60557efd(Integer x, Integer result){
+    int lastDigit = x % 10;
+    int newResult = result * 10 + lastDigit;
+    if ((newResult - lastDigit) / 10 != result) {
+        return 0;
+    }
+    result = newResult;
+    x /= 10;
+    return x;
+}
+public static Integer func_d7697c1d19464e26a46edd28112b4ac4(Integer x, Integer rev){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    return x;
+}
+public static Integer func_cc05c4717abc4619a243b67cb40bf6f9(Integer x, Integer rev){
+    int lastDigit = x % 10;
+    x /= 10;
+    if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && lastDigit > 7))
+        return 0;
+    if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && lastDigit < -8))
+        return 0;
+    rev = rev * 10 + lastDigit;
+    return x;
+}
+
+
+****** Cluster 167 ******
+public static Integer func_0ad616f7218a4bfe9573b96449b27110(Integer rem, Integer x, Integer result){
+    while (x != 0) {
+        rem = x % 10;
+        x = x / 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+            return 0;
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+            return 0;
+        result = result * 10 + rem;
+    }
+    return rem;
+}
+public static Integer func_770188a634ca4cf89bc1ab337a07b637(Integer result, Integer x, Integer rem){
+    while (x != 0) {
+        rem = x % 10;
+        x = x / 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+            return 0;
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+            return 0;
+        result = result * 10 + rem;
+    }
+    return rem;
+}
+
+
+****** Cluster 169 ******
+public static Integer func_f7968ce9680849f6b1c2823d0b3c876d(Integer x, Integer result, Integer rem){
+    while (x != 0) {
+        rem = x % 10;
+        x = x / 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+            return 0;
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+            return 0;
+        result = result * 10 + rem;
+    }
+    return rem;
+}
+public static Integer func_62c109964dab4b9eaf0f1de0a7a83459(Integer x, Integer rem, Integer result){
+    while (x != 0) {
+        rem = x % 10;
+        x = x / 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+            return 0;
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+            return 0;
+        result = result * 10 + rem;
+    }
+    return rem;
+}
+
+
+****** Cluster 171 ******
+public static Integer func_fe18d87e4747455aa3718954ac18b016(Integer result, Integer rem, Integer x){
+    while (x != 0) {
+        rem = x % 10;
+        x = x / 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+            return 0;
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+            return 0;
+        result = result * 10 + rem;
+    }
+    return rem;
+}
+public static Integer func_5a5540736f974030ab37ae6dff2be3c7(Integer rem, Integer result, Integer x){
+    while (x != 0) {
+        rem = x % 10;
+        x = x / 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+            return 0;
+        if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+            return 0;
+        result = result * 10 + rem;
+    }
+    return rem;
+}
+
+
+****** Cluster 47 ******
+public static Integer func_a4bbe853fd934b4c8572471522d0e728(Integer x){
+    int result = 0;
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+            return 0;
+        }
+        result = result * 10 + digit;
+    }
+    return result;
+}
+public static Integer func_a5cac12db8d2432fa496a9a84f720123(Integer x){
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    int reversed = 0;
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    return reversed;
+}
+public static Integer func_d43ad9be6aa445b69c37559fb1fda07c(Integer x){
+    x = Math.abs(x);
+    int reversed = 0;
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    if (reversed < -(Math.pow(2, 31)) || reversed > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    return reversed;
+}
+public static Integer func_e613b8f62aa14419a7beba6139209db3(Integer x){
+    if (x < -(Math.pow(2, 31)) || x > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    int reversed = 0;
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    return reversed;
+}
+public static Integer func_015b0f5867974a3096a171dcea17a077(Integer x){
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    int reversed = 0;
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    if (reversed < -(Math.pow(2, 31)) || reversed > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    return reversed;
+}
+public static Integer func_cd1408604e244552a35c10cab0140edc(Integer x){
+    if (x < -(Math.pow(2, 31)) || x > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    int reversed = 0;
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    if (reversed < -(Math.pow(2, 31)) || reversed > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    return reversed;
+}
+public static Integer func_88328be78bdf404db6306cfc6c182f03(Integer x){
+    boolean isNegative = false;
+    if (x < 0) {
+        isNegative = true;
+        x *= -1;
+    }
+    int reversedInt = 0;
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (reversedInt > Integer.MAX_VALUE / 10 || (reversedInt == Integer.MAX_VALUE / 10 && digit > 7)) {
+            return 0;
+        }
+        reversedInt = reversedInt * 10 + digit;
+    }
+    return reversedInt;
+}
+
+
+****** Cluster 48 ******
+public static Integer func_c4c68e22e73c48918ea48e1e747339d2(Integer x){
+    int result = 0;
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+            return 0;
+        }
+        result = result * 10 + digit;
+    }
+    return sign;
+}
+public static Integer func_7c376ee9c2ca4d708cd44b1f333d61de(Integer x){
+    if (x < -(Math.pow(2, 31)) || x > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    int reversed = 0;
+    return sign;
+}
+public static Integer func_3f9d5b149b114209ab035391aac7e723(Integer x){
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    int reversed = 0;
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    return sign;
+}
+public static Integer func_ec74d652501e441fb120318ab2336da5(Integer x){
+    if (x < -(Math.pow(2, 31)) || x > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    int reversed = 0;
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    return sign;
+}
+public static Integer func_d24ac51247d74a54832291d2648c2fe6(Integer x){
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    int reversed = 0;
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    if (reversed < -(Math.pow(2, 31)) || reversed > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    return sign;
+}
+public static Integer func_cf3fb50b147f46a69d3251b6062a0dda(Integer x){
+    if (x < -(Math.pow(2, 31)) || x > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    int sign = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    int reversed = 0;
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    if (reversed < -(Math.pow(2, 31)) || reversed > (Math.pow(2, 31) - 1)) {
+        return 0;
+    }
+    return sign;
+}
+
+
+****** Cluster 52 ******
+public static Integer func_bf7f6e9e762447a583cb5cf093b5b605(Integer result, Integer x){
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+            return 0;
+        }
+        result = result * 10 + digit;
+    }
+    return result;
+}
+public static Integer func_32d42dc203b34b5181e1ded115dc28a1(Integer reversed, Integer x){
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    return reversed;
+}
+public static Integer func_4b2dc20a94b04a0a83034afadd46d695(Integer reversedInt, Integer x){
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (reversedInt > Integer.MAX_VALUE / 10 || (reversedInt == Integer.MAX_VALUE / 10 && digit > 7)) {
+            return 0;
+        }
+        reversedInt = reversedInt * 10 + digit;
+    }
+    return reversedInt;
+}
+
+
+****** Cluster 53 ******
+public static Integer func_097240a385b043c1a3b208151b693cf0(Integer x, Integer result){
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+            return 0;
+        }
+        result = result * 10 + digit;
+    }
+    return result;
+}
+public static Integer func_7c843d377f54400688a4fee49f866452(Integer x, Integer reversed){
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    return reversed;
+}
+public static Integer func_c5e305fa0c984632a891713ad01f9add(Integer x, Integer reversedInt){
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (reversedInt > Integer.MAX_VALUE / 10 || (reversedInt == Integer.MAX_VALUE / 10 && digit > 7)) {
+            return 0;
+        }
+        reversedInt = reversedInt * 10 + digit;
+    }
+    return reversedInt;
+}
+
+
+****** Cluster 54 ******
+public static Integer func_3aca1453f0424179b8b6fe81423b4a53(Integer result, Integer x){
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+            return 0;
+        }
+        result = result * 10 + digit;
+    }
+    return x;
+}
+public static Integer func_6b8da077922f45efa9f1b5faa9210f12(Integer reversed, Integer x){
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    return x;
+}
+public static Integer func_6a4444b23ff44a4cae9323181961e9e4(Integer reversedInt, Integer x){
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (reversedInt > Integer.MAX_VALUE / 10 || (reversedInt == Integer.MAX_VALUE / 10 && digit > 7)) {
+            return 0;
+        }
+        reversedInt = reversedInt * 10 + digit;
+    }
+    return x;
+}
+
+
+****** Cluster 55 ******
+public static Integer func_080151c88f2c4de9a2ba9ba94bf0c173(Integer x, Integer result){
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+            return 0;
+        }
+        result = result * 10 + digit;
+    }
+    return x;
+}
+public static Integer func_42651c9f298c4e30908f4267789b0fa8(Integer x, Integer reversed){
+    while (x > 0) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    return x;
+}
+public static Integer func_c1498b1a607b42e8bddb5892f4a9b326(Integer x, Integer reversedInt){
+    while (x > 0) {
+        int digit = x % 10;
+        x /= 10;
+        if (reversedInt > Integer.MAX_VALUE / 10 || (reversedInt == Integer.MAX_VALUE / 10 && digit > 7)) {
+            return 0;
+        }
+        reversedInt = reversedInt * 10 + digit;
+    }
+    return x;
+}
+
+
+****** Cluster 125 ******
+public static Integer func_4aef00280a67431c95d7c284527d207f(Integer rem, Integer x, Integer result){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    return rem;
+}
+public static Integer func_e8883e9932284f8aba89b548542f1cf3(Integer result, Integer x, Integer rem){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    return rem;
+}
+public static Integer func_da772be266b44532a5506fd6dd4c7f8c(Integer rem, Integer x, Integer result){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return rem;
+}
+public static Integer func_ee92553b30ab447fa42748390259bf6d(Integer result, Integer x, Integer rem){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return rem;
+}
+
+
+****** Cluster 126 ******
+public static Integer func_d4f572c19f6a47ac959ee1c50dc4dede(Integer x, Integer rem, Integer result){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    return rem;
+}
+public static Integer func_9b346c34987a4c17a08a82fbe508dee2(Integer x, Integer result, Integer rem){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    return rem;
+}
+public static Integer func_eabb03f92b6947119fbc2526c283c465(Integer x, Integer rem, Integer result){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return rem;
+}
+public static Integer func_f270c21465234acea6f28bb50b6cc946(Integer x, Integer result, Integer rem){
+    rem = x % 10;
+    x = x / 10;
+    if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && rem > 7))
+        return 0;
+    if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && rem < -8))
+        return 0;
+    result = result * 10 + rem;
+    return rem;
+}
