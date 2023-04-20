@@ -153,7 +153,17 @@ public static int reverseInt(int x) {
     
     // return reversed with its original sign
     return reversed * sign;
-}
+}[]
+function = []
+counter = 0
+
+
+for line in lines:
+    counter+=1
+    if line.startswith("public"):
+        ## put a comma before the function in the file
+        lines[counter-1] = "," + line
+
 
 
 public static int reverseInt(int x) {
@@ -257,6 +267,7 @@ public static int reverseInt(int x) {
     return result;
 }
 
+
 public static int reverseInt(int x) {
     int result = 0;
     while(x != 0) {
@@ -318,7 +329,6 @@ public static int reverseDigits(int x) {
 }
 
 
-
 public static int reverseDigits(int x) {
     int rev = 0;
     while (x != 0) {
@@ -330,4 +340,3 @@ public static int reverseDigits(int x) {
     }
     return rev;
 }
-

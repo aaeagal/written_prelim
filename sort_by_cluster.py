@@ -4,45 +4,49 @@ import os
 import sys
 #import collect_nl_samples
 import nltk
+nltk.download("punkt")
 
-def create_cluster_info():
+prompt_id = "reverse_integer"
+simularity_score = 0.01
+
+def get_original_functions():
     # read prompt.Java
-    prompt_id = "reverse_integer"
     with open(f"samples/{prompt_id}/{prompt_id}.Java", "r") as f:
-        code_samples = []
+      
+        original_functions = [[]]
+        counter = 0
         lines = f.readlines()
-        stop_token = "x"
         for line in lines:
-           # store functions in code_samples
-              if line.startswith("public"):
-                    code_samples.append(line)
-                    stop_token = "}"
-                elif line.startswith("}"):
-                    code_samples.append(line)
-                    stop_token = "x"
-                elif stop_token == "}":
-                    code_samples.append(line)
-        print(code_samples)
+            # make a new list for every function
+            if line.startswith("public"):
+                # add all lines to one element in the list until the next public word
+                original_functions.append([])
+                counter += 1
+            
+            #remove comments
+            if "//" in line:
+                line = ""
+
+            
+
+            original_functions[counter].append(line)
+        
+    return original_functions
+    
 
 
+def look_for_clones(original_functions):
 
-
-
-
-
+    with open(f"samples/{prompt_id}/only_java{simularity_score}.txt", "r") as f:
+        lines = f.readlines()
         
 
 
-    
-
-
- 
-    
-     
 
 
 def main():
-    create_cluster_info()
+    original_functions = get_original_functions()
+    look_for_clones(original_functions)
 
     print("End of program")
     
